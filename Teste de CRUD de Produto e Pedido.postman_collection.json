@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "c5ead79a-4971-4212-a18e-8caada14cd63",
+		"name": "Teste de CRUD de Produto e Pedido",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10250448"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "get products",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/api/products",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "get tasks model "
+					},
+					"response": []
+				},
+				{
+					"name": "Product Store",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "testar rotas de API",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Tricot trabalhado em grade moderno, produzido artesanalmente. Feito em dois cabos 100% algodão de alta qualidade, estonado em tinturaria. Gola redonda. Estilo, conforto e elegância para os dias mais frios.",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "72.35",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/products",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Store task by form-data inputs"
+					},
+					"response": []
+				},
+				{
+					"name": "Product update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tricot moderno\",\n    \"description\": \"Tricot trabalhado em grade moderno, produzido artesanalmente. Feito em dois cabos 100% algodão de alta qualidade, estonado em tinturaria. Gola redonda. Estilo, conforto e elegância para os dias mais frios.\",\n    \"price\": 71.50,\n    \"stock\": 750\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api/products/10",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"products",
+								"10"
+							]
+						},
+						"description": "put update task by raw text type json"
+					},
+					"response": []
+				},
+				{
+					"name": "Product delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost/api/products/10",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"products",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customers",
+			"item": [
+				{
+					"name": "get customers",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/api/customers",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						},
+						"description": "get tasks model "
+					},
+					"response": []
+				},
+				{
+					"name": "customers Store",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "reason_social",
+									"value": "EXCELLENT SISTEMAS",
+									"type": "text"
+								},
+								{
+									"key": "cnpj",
+									"value": "24813687000142",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "excellentsistemas@gmail.com.br",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost/api/customers",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						},
+						"description": "Store task by form-data inputs"
+					},
+					"response": []
+				},
+				{
+					"name": "customers update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"reason_social\": \"EXCELLENT SISTEMAS GESTAO AUTOMACAO CONSULTAS & VENDAS ON-LINE LTDA\",\n    \"cnpj\": \"24813687000142\",\n    \"email\": \"excellentsistemas@gmail.com.br\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api/customers/4",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"customers",
+								"4"
+							]
+						},
+						"description": "put update task by raw text type json"
+					},
+					"response": []
+				},
+				{
+					"name": "customers delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost/api/customers/4",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"customers",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "get orders",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost/api/orders",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						},
+						"description": "get tasks model "
+					},
+					"response": []
+				},
+				{
+					"name": "orders Store",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 3,\r\n    \"products\": [\r\n        {\r\n            \"id\": 2,\r\n            \"quantity\": 2,\r\n            \"price\": 203500.00\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"quantity\": 2,\r\n            \"price\": 1500\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api/orders",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						},
+						"description": "Store task by form-data inputs"
+					},
+					"response": []
+				},
+				{
+					"name": "orders update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\": 2,\n    \"products\": [\n        {\n            \"id\": 2,\n            \"quantity\": 2,\n            \"price\": 203500.00\n        },\n        {\n            \"id\": 4,\n            \"quantity\": 2,\n            \"price\": 1500\n        }\n    ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api/orders/2",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"orders",
+								"2"
+							]
+						},
+						"description": "put update task by raw text type json"
+					},
+					"response": []
+				},
+				{
+					"name": "orders delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost/api/orders/3",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"orders",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
