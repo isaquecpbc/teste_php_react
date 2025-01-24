@@ -76,7 +76,7 @@ export default function ListProducts() {
                 products.map((product, key) =>
                     <Col key={key} className="col-4">
                         <Card bg="light" border="dark" className="mb-3">
-                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Img variant="top" src="holder.js/300x200" />
                             <Card.Body>
                                 <Card.Title>{product.name}</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">R$ {product.price}</Card.Subtitle>
